@@ -1,9 +1,4 @@
 /**
-* This is a program that convert a binary number to its complement
-* A complement of a number is defined as inversion 
-* (if the bit value = 0, change it to 1 and vice-versa) of all bits of the number
-* starting from the leftmost bit that is set to 1. 
-*
 * @author Muhammad Azani hasibuan (muhammad.azani@gmail.com)
 */
 
@@ -12,34 +7,33 @@ import java.io.Console;
 
 public class BinaryInverser {
 
-
 	public static void main(String[] args) {
 		
 		//Get input from terminal and Casting input string to integer
 		Console c = System.console();
 		String quit ="q";
-    if (c == null) {
-            System.err.println("No console.");
-            System.exit(1);
-     }
+		if (c == null) {
+		    System.err.println("No console.");
+		    System.exit(1);
+		 }
      
-    while(true){
-      String input = c.readLine("Enter your decimal number (1-1000) or q to quit: ");
+    		while(true){
+      			String input = c.readLine("Enter your decimal number (1-1000) or q to quit: ");
     
-      if (!input.equals(quit)){
+      		if (!input.equals(quit)){
           
-          //check whether the input contain string or not
-          if(!input.matches(".*\\D.*")){
-            int decInput = Integer.parseInt(input);
-		        System.out.println("input : "+input);
-		        System.out.println("output : "+binToDec(revBin(decToBin(decInput))));
-		      }else{
-		        System.out.println("your input not valid, please enter number 1-1000");
-		      }
-      }else{                                    
-          //quit from this program
-          System.out.println("Thank you");
-		      System.exit(1);
+	          //check whether the input contain string or not
+	          if(!input.matches(".*\\D.*")){
+	            int decInput = Integer.parseInt(input);
+			        System.out.println("input : "+input);
+			        System.out.println("output : "+binToDec(revBin(decToBin(decInput))));
+			      }else{
+			        System.out.println("your input not valid, please enter number 1-1000");
+			      }
+	      	 }else{                                    
+		          //quit from this program
+		          System.out.println("Thank you");
+		      	  System.exit(1);
 		  }
 		     
 	  }
@@ -70,10 +64,10 @@ public class BinaryInverser {
 	}
 	
 	
-/**
-*This is function to reverse the binary number
-*@param bin an Arraylist that contain binnary number
-*/
+	/**
+	*This is function to reverse the binary number
+	*@param bin an Arraylist that contain binnary number
+	*/
 	public static ArrayList<Integer> revBin(ArrayList<Integer> bin){
 		ArrayList<Integer> revBin = new ArrayList<Integer>();
 
@@ -90,10 +84,10 @@ public class BinaryInverser {
 
 	}
 	
-/**
-*This is function to convert the reversed binary number to decimal
-*@param bin an Arraylist that contain reversed binnary number
-*/
+	/**
+	*This is function to convert the reversed binary number to decimal
+	*@param bin an Arraylist that contain reversed binnary number
+	*/
 	public static int binToDec(ArrayList<Integer> binRev){
 		int revDec =0;
 		
