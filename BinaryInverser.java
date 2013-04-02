@@ -22,14 +22,14 @@ public class BinaryInverser {
     
       		if (!input.equals(quit)){
           
-	          //check whether the input contain string or not
-	          if(!input.matches(".*\\D.*")){
-	            int decInput = Integer.parseInt(input);
-			        System.out.println("input : "+input);
-			        System.out.println("output : "+binToDec(revBin(decToBin(decInput))));
-			      }else{
-			        System.out.println("your input not valid, please enter number 1-1000");
-			      }
+		          //check whether the input contain string or not
+		          if(!input.matches(".*\\D.*")){
+		            int decInput = Integer.parseInt(input);
+				        System.out.println("input : "+input);
+				        System.out.println("output : "+binToDec(revBin(decToBin(decInput))));
+			  }else{
+			    System.out.println("your input not valid, please enter number 1-1000");
+			  }
 	      	 }else{                                    
 		          //quit from this program
 		          System.out.println("Thank you");
